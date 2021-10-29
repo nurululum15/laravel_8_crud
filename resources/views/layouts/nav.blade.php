@@ -11,7 +11,7 @@
           </li>
           
           <li class="nav-item">
-            <a href="/menu" class="{{request()->is('menu') ? 'nav-link active' :'nav-link'}}">
+            <a href="/projects" class="{{request()->is('menu') ? 'nav-link active' :'nav-link'}}">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 Menu
@@ -21,7 +21,7 @@
 
           <li class="nav-item">
             <a href="/favorites" class="{{request()->is('favorites') ? 'nav-link active' :'nav-link'}}">
-              <i class="nav-icon fas fa-table"></i>
+              <i class="nav-icon fas fa-star"></i>
               <p>
                 Favorites
               </p>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Log in</title>
+  <title>AdminLTE 3 | Register</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -18,14 +18,30 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Login</b>Users</a>
+    <a href="../../index2.html"><b>Register</b>Users</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Login to start your new Experience</p>
+      <p class="login-box-msg">Register to start your new Experience</p>
 
-      <form method="POST" action="{{ route('login') }}">
+      <form method="POST" action="{{ route('register') }}">
+        @csrf
+        <div class="input-group mb-3">
+          <input name="name" class="form-control" placeholder="Name">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+              @error('name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+            </div>
+          </div>
+        </div>
+
+        <form method="POST" action="{{ route('login') }}">
         @csrf
         <div class="input-group mb-3">
           <input type="email" name="email" class="form-control" placeholder="Email">
@@ -40,6 +56,7 @@
             </div>
           </div>
         </div>
+
         <div class="input-group mb-3">
           <input type="password" name="password" class="form-control" placeholder="Password">
           <div class="input-group-append">
@@ -53,6 +70,16 @@
             </div>
           </div>
         </div>
+
+        <div class="input-group mb-3">
+          <input type="password" name="password_confirmation" class="form-control" placeholder="Confirmation Password">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
@@ -64,14 +91,14 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
 
       <p class="mb-0">
-        <a href="{{ route('register') }}" class="text-center">Register</a>
+        <a href="{{ route('login') }}" class="text-center">Login Now</a>
       </p>
     </div>
     <!-- /.login-card-body -->

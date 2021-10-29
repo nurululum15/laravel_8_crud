@@ -19,14 +19,6 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-
-    <!-- <table class="table table-bordered table-responsive-lg">
-        <tr>
-        <div class="card"> -->
-              <!-- <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
-              </div>
-               /.card-header -->
               <div class="card-header">
                 <table id="card-title" class="table table-bordered table-striped-responsive-lg">
                   <thead>
@@ -40,19 +32,6 @@
                     <th width="280px">Action</th>
                   </tr>
                   </thead>
-                <!-- </table>
-              </div> -->
-              <!-- /.card-body -->
-            <!-- </div> -->
-            <!-- /.card -->
-          <!-- </div> -->
-            <!-- <th>No</th>
-            <th>Name</th>
-            <th>Introduction</th>
-            <th>Location</th>
-            <th>Cost</th>
-            <th>Date Created</th>
-            <th width="280px">Action</th> -->
         <tbody>
         </tr>
         @foreach ($projects as $project)
