@@ -1,4 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.template')
+@section('title', 'Create Page')
 
 @section('content')
     <div class="row">

@@ -15,11 +15,19 @@ use App\Http\Controllers\ProjectController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('projects.index');
 });
+
+// Route::get('/', function () {
+//     return view('layouts.template');
+// });
 
 
 Route::resource('projects', ProjectController::class);
 
 // Route::resource('projects', 'ProjectController');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

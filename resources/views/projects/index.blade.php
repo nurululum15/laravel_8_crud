@@ -1,4 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.template')
+@section('title', 'Menu Page')
 
 @section('content')
     <div class="row">
@@ -19,15 +20,40 @@
         </div>
     @endif
 
-    <table class="table table-bordered table-responsive-lg">
+    <!-- <table class="table table-bordered table-responsive-lg">
         <tr>
-            <th>No</th>
+        <div class="card"> -->
+              <!-- <div class="card-header">
+                <h3 class="card-title">DataTable with default features</h3>
+              </div>
+               /.card-header -->
+              <div class="card-header">
+                <table id="card-title" class="table table-bordered table-striped-responsive-lg">
+                  <thead>
+                  <tr>
+                    <th>No</th> 
+                    <th>Name</th>
+                    <th>Introduction</th>
+                    <th>Location</th>
+                    <th>Costs</th>
+                    <th>Date Created</th>
+                    <th width="280px">Action</th>
+                  </tr>
+                  </thead>
+                <!-- </table>
+              </div> -->
+              <!-- /.card-body -->
+            <!-- </div> -->
+            <!-- /.card -->
+          <!-- </div> -->
+            <!-- <th>No</th>
             <th>Name</th>
             <th>Introduction</th>
             <th>Location</th>
             <th>Cost</th>
             <th>Date Created</th>
-            <th width="280px">Action</th>
+            <th width="280px">Action</th> -->
+        <tbody>
         </tr>
         @foreach ($projects as $project)
             <tr>
@@ -60,7 +86,9 @@
                 </td>
             </tr>
         @endforeach
+        <tbody>
     </table>
+    <div>
 
     {!! $projects->links() !!}
 
