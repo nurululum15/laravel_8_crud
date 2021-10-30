@@ -14,9 +14,7 @@ use App\Http\Controllers\ProjectController;
 |
 */
 
-Route::get('/', function () {
-    return view('projects.index');
-});
+Route::get('/', function () {return view('projects.index');});
 
 // Route::get('/', function () {
 //     return view('layouts.template');
