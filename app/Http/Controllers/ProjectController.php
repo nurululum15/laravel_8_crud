@@ -36,6 +36,17 @@ class ProjectController extends Controller
         return view('projects.create');
     }
 
+    public function favorites()
+    {
+        return view('projects.favorites');
+    }
+
+    public function v_index()
+    {
+        return view('projects.index');
+    }
+
+
     /**
      * Store a newly created resource in storage.
      *

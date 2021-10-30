@@ -54,6 +54,11 @@
 
                         </a>
 
+                        <a href="#">
+                            <i class="fas fa-star  fa-lg"></i>
+
+                        </a>
+
                         @csrf
                         @method('DELETE')
 
